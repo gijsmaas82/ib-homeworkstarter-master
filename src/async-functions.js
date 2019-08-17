@@ -2,13 +2,14 @@ const fetch = require('node-fetch')
 const request = require('request')
 
 function getTatooineResidents() {
+
+}
     
 
-
-   function promiseMeAString() {
+function promiseMeAString() {
     console.log('hi')
 
-    }
+}
 
 
 

@@ -86,7 +86,7 @@ describe("Assignment 3 - async", function() {
     }
   })
 
-  it.only('getTatooineResidents shoud return a promise', function(done){
+  it('getTatooineResidents shoud return a promise', function(done){
     // Intercept request and respond with a fake response
     nock('https://swapi.co/api')
       .get('/planets/1/')
