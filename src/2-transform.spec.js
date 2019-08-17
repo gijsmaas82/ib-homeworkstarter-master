@@ -10,7 +10,7 @@ describe("Assignment 2 - transform", function () {
     const grouping = groupAdultsByAgeRange([])
     assert.deepStrictEqual(grouping, {})
   })
-  it.only("filters out people under the age of 18", function() {
+  it("filters out people under the age of 18", function() {
     const groupAdultsByAgeRange = require("./transform").groupAdultsByAgeRange
     const grouping = groupAdultsByAgeRange([
       { name: "pete", age: 10 },
@@ -18,7 +18,7 @@ describe("Assignment 2 - transform", function () {
     ])
     assert.deepStrictEqual(grouping, {})
   })
-  it("only contains non-empty groups", function() {
+  it.only("only contains non-empty groups", function() {
     const groupAdultsByAgeRange = require("./transform").groupAdultsByAgeRange
     const grouping = groupAdultsByAgeRange([{name: "Anna", age: 31}, {name: "John", age: 32}, {name: "Hank", age: 60}])
     const result = { 
