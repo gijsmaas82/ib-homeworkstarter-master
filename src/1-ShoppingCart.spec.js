@@ -7,7 +7,7 @@ describe("Assignment 1 - ShoppingCart", function() {
     new ShoppingCart()
   })
 
-  it("should be able to add items", function() {
+  it.only("should be able to add items", function() {
     const ShoppingCart = require("./ShoppingCart")
     const cart = new ShoppingCart()
     assert.deepStrictEqual(
