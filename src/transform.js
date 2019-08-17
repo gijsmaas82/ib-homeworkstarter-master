@@ -3,6 +3,7 @@ function groupAdultsByAgeRange(array) {
         if (obj.age < 18) {
             return group
         } else if (obj.age <= 20) {
+            Object.defineProperty(group, '20 and younger', [] )
             group['20 and younger'].push(obj)
             return group
         } else if (obj.age >=21 && obj.age <=30) {
@@ -20,7 +21,7 @@ function groupAdultsByAgeRange(array) {
         }
         return group    
     }, {
-        '20 and younger': [],
+        
         '21-30': [],
         '31-40': [],
         '41-50': [],
