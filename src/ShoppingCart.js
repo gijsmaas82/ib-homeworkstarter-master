@@ -24,21 +24,41 @@ class ShoppingCart {
         this.cart = []
         return this.cart
     }
+
+    total() {
+        
+        const pricesArray = this.cart.map(item => item = item.pricePerUnit * item.quantity)
+        const total = pricesArray.reduce((acc, cur) => acc + cur, 0)
+        
+        return total
+        
+        // console.log(prices)
+        
+    }
     
 }
 
 const cart = new ShoppingCart()
-console.log(cart.getItems())
-cart.addItem('h', 'h', 'h')
-console.log(cart.getItems())
-cart.addItem('h', 'h', 'h')
-console.log(cart.getItems())
-cart.addItem('h', 'h', 'h')
-console.log(cart.getItems())
-console.log(cart.clear())
-console.log(cart.getItems())
-cart.addItem('h', 'h', 'h')
-console.log(cart.getItems())
+// console.log(cart.getItems())
+// cart.addItem('h', 'h', 'h')
+// console.log(cart.getItems())
+// cart.addItem('h', 'h', 'h')
+// console.log(cart.getItems())
+// cart.addItem('h', 'h', 'h')
+// console.log(cart.getItems())
+// console.log(cart.clear())
+// console.log(cart.getItems())
+// cart.addItem('h', 'h', 'h')
+// console.log(cart.getItems())
+
+cart.addItem("item 1", 1, 15.5)
+cart.addItem("item 2", 2, 3)
+cart.addItem("item 3", 10, 2)
+cart.addItem("item 4", 0, 2)
+cart.addItem("item 5", 2, 0)
+console.log(cart.total())
+const cart2 = new ShoppingCart
+console.log(cart2.total())
 
 
 
