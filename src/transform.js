@@ -2,9 +2,9 @@ function groupAdultsByAgeRange(array) {
     const object = array.reduce((group, obj) => { 
         if (obj.age < 18) {
             return group
-        } else if (obj.age <= 20) {
+        } else if (obj.age >=18 && obj.age <=20) {
             group['20 and younger'].push(obj)
-            return group
+            return group    
         } else if (obj.age >=21 && obj.age <=30) {
             group['21-30'].push(obj)
             return group
@@ -18,6 +18,7 @@ function groupAdultsByAgeRange(array) {
             group['51 and older'].push(obj)
             return group
         }
+        
         return group    
     }, {
         '20 and younger': [],
@@ -26,10 +27,7 @@ function groupAdultsByAgeRange(array) {
         '41-50': [],
         '51 and older': []
     })
-    console.log(object)
     return object
 }
-console.log(groupAdultsByAgeRange([{name: "Anna", age: 31}, {name: "John", age: 32}, {name: "Hank", age: 60}]))
-// console.log(groupAdultsByAgeRange([{ name: "pete", age: 10 },
-// { name: "dove", age: 17 },]))
+
 module.exports = {groupAdultsByAgeRange}
