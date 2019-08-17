@@ -20,6 +20,10 @@ class ShoppingCart {
         cart.push(newItem)
         return cart
     }
+    clear() {
+        this.cart = []
+        return this.cart
+    }
     
 }
 
@@ -31,6 +35,11 @@ cart.addItem('h', 'h', 'h')
 console.log(cart.getItems())
 cart.addItem('h', 'h', 'h')
 console.log(cart.getItems())
+console.log(cart.clear())
+console.log(cart.getItems())
+cart.addItem('h', 'h', 'h')
+console.log(cart.getItems())
+
 
 
 
