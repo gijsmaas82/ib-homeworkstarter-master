@@ -1,5 +1,5 @@
 function groupAdultsByAgeRange(array) {
-    const object = array.reduce((group, obj) => { 
+    let object = array.reduce((group, obj) => { 
         if (obj.age < 18) {
             return group
         } else if (obj.age >=18 && obj.age <=20) {
@@ -18,7 +18,6 @@ function groupAdultsByAgeRange(array) {
             group['51 and older'].push(obj)
             return group
         }
-        
         return group    
     }, {
         '20 and younger': [],
@@ -27,6 +26,24 @@ function groupAdultsByAgeRange(array) {
         '41-50': [],
         '51 and older': []
     })
+    
+    const checkArray = Object.values(object)
+    
+    if (!checkArray[0][0]) {
+        delete object['20 and younger']
+    } 
+    if (!checkArray[1][0]) {
+        delete object['21-30']
+    }  
+    if (!checkArray[2][0]) {
+        delete object['31-40']
+    } 
+    if (!checkArray[3][0]) {
+        delete object['41-50']
+    }  
+    if (!checkArray[4][0]) {
+        delete object['51 and older']
+    }
     return object
 }
 

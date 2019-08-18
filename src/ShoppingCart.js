@@ -15,9 +15,8 @@ class ShoppingCart {
                 this.pricePerUnit = pricePerUnit
             }
         }
-        const newItem = new NewItem
         const cart = this.getItems()
-        cart.push(newItem)
+        cart.push(new NewItem)
         return cart
     }
     clear() {
@@ -31,5 +30,5 @@ class ShoppingCart {
         return total
     }
 }
-    
+
 module.exports = ShoppingCart
